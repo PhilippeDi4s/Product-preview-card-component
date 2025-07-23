@@ -20,7 +20,7 @@
 
     <title>Frontend Mentor | Product preview card component</title>
 
-    <style>
+        <style>
       body {
         *,
         *:after,
@@ -36,7 +36,6 @@
       }
 
       body {
-        margin: 0;
         background-color: hsl(30, 38%, 92%);
         font-family: Montserrat;
       }
@@ -50,7 +49,8 @@
         padding: .5rem;
       }
 
-      .produtc__card{
+      
+      .product__card{
         width: 100%;
         min-width: 17rem;
         background-color: white;
@@ -58,7 +58,7 @@
         overflow: hidden;
       }
 
-      .produtc__card:not(:last-child){
+      .product__card:not(:last-child){
         margin-bottom: 3rem;
       }
 
@@ -68,11 +68,10 @@
 
       .product__image img{
         width: 100%;
-        display: block;
       }
 
       .img--desktop{
-        display: none !important;
+        display: none;
       }
 
       .card__content{
@@ -167,8 +166,9 @@
           justify-content: center;
         }
         
-        .produtc__card{
-          max-width: 37.5rem;
+        .product__card{
+          width: 45%;
+          min-width: 28rem;
           display: flex;
           margin-bottom: 0 !important;
         }
@@ -184,11 +184,11 @@
         }
         
         .img--desktop{
-        display: block !important;
+        display: block;
       }
 
       .img--mobile{
-        display: none !important;
+        display: none;
       }
 
       .card__content{
@@ -200,10 +200,32 @@
 
     </style>
 
+    </head>
+
     <main class="main">
       <section class="products">
 
-        <article class="produtc__card">
+        <article class="product__card">
+          <div class="product__image">
+            <img class="img--mobile" src="/images/image-product-mobile.jpg" alt="">
+            <img class="img--desktop" src="/images/image-product-desktop.jpg" alt="">
+          </div>
+          <div class="card__content">
+            <p class="product__category">perfume</p>
+            <h1 class="product__name">Gabrielle Essence Eau De Parfum</h1>
+            <p class="product__description">
+              Lorem ipsum dolor sit amet 
+              consectetur adipisicing elit. Quisquam rem consequuntur sint
+               facere velit iusto vel illo molestiae recusandae voluptas.
+              </p>
+              <div class="card__price">
+                <p class="product__price">$149.99</p>
+                <span class="product__price-original">$169.99</span>
+              </div>
+              <button class="card__btn"><img src="/images/icon-cart.svg" alt="">Add to Cart</button>
+          </div>
+        </article>
+        <article class="product__card">
           <div class="product__image">
             <img class="img--mobile" src="/images/image-product-mobile.jpg" alt="">
             <img class="img--desktop" src="/images/image-product-desktop.jpg" alt="">
